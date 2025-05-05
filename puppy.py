@@ -1,13 +1,10 @@
-
-import state_asleep
-import state_play
-import state_eat
+import puppy_state
 
 class Puppy: 
 
 
     def __init__(self): 
-        self._state = state_asleep.StateAsleep()
+        self._state = puppy_state.state_asleep.StateAsleep()
         self._feeds = 0 
         self._plays = 0 
 
