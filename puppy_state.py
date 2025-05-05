@@ -1,5 +1,8 @@
 
-import abc 
+import abc
+import state_asleep 
+import state_eat
+import state_play
 
 class PuppyState(abc.ABC): 
 
@@ -12,4 +15,4 @@ class PuppyState(abc.ABC):
         pass
 
 
-    
+
