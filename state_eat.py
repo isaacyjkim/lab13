@@ -9,12 +9,13 @@ import state_asleep
 
 class StateEat:
     def feed(self, puppy):
-        times = random.choice([3,2])
-        puppy.change_state(state_asleep.StateAsleep())
         puppy.inc_feeds()
-        if puppy._feeds == times:
+        if puppy._feeds == 3:
+            puppy.change_state(state_asleep.StateAsleep())
+            puppy.reset()
             print('The puppy continues to eat as you add another scoop of kibble to its bowl.\n The puppy ate so much it fell asleep!')
-        print ('The puppy continues to eat as you add another scoop of kibble to its bowl.')
+        else:
+            print ('The puppy continues to eat as you add another scoop of kibble to its bowl.')
 
     def play(self,puppy):
         puppy.change_state(state_play.StatePlay())

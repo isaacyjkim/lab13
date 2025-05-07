@@ -9,9 +9,11 @@ class StatePlay:
         print ('The puppy is too busy playing with the ball to eat right now.')
 
     def play(self,puppy):
-        times = random.choice([3,2])
-        puppy.change_state(state_asleep.StateAsleep())
+        
         puppy.inc_plays()
-        if puppy._plays == times:
+        if puppy._plays == 3:
+            puppy.change_state(state_asleep.StateAsleep())
+            puppy.reset()
             print('You throw the ball again and the puppy excitedly chases it. \n The puppy played so much it fell asleep!')
-        print ('You throw the ball again and the puppy excitedly chases it.')
+        else:
+            print ('You throw the ball again and the puppy excitedly chases it.')
