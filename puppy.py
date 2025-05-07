@@ -20,10 +20,10 @@ class Puppy:
         self._state = new_state
 
     def throw_ball(self):
-        self._state.play() 
+        self._state.play(self) 
     
     def give_food(self): 
-        self._state.feed()
+        self._state.feed(self)
 
     def inc_feeds(self): 
         self._feeds += 1

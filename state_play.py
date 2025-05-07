@@ -1,16 +1,17 @@
 import puppy_state
 import random
-from state_eat import StateEat
-from state_asleep import StateAsleep
+import state_asleep
+# from state_eat import StateEat
+#from state_asleep import StateAsleep
 
 class StatePlay:
     def feed(self, puppy):
-        return ('The puppy is too busy playing with the ball to eat right now.')
+        print ('The puppy is too busy playing with the ball to eat right now.')
 
     def play(self,puppy):
         times = random.choice([3,2])
-        add = ""
+        puppy.change_state(state_asleep.StateAsleep())
+        puppy.inc_plays()
         if puppy._plays == times:
-            puppy.change_state(StateAsleep)
-            add = '\n The puppy played so much it fell asleep!'
-        return ('You throw the ball again and the puppy excitedly chases it.'+add)
+            print('You throw the ball again and the puppy excitedly chases it. \n The puppy played so much it fell asleep!')
+        print ('You throw the ball again and the puppy excitedly chases it.')
