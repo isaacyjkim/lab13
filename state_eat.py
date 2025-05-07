@@ -13,7 +13,7 @@ class StateEat:
         if puppy._feeds == 3:
             puppy.change_state(state_asleep.StateAsleep())
             puppy.reset()
-            print('The puppy continues to eat as you add another scoop of kibble to its bowl.\n The puppy ate so much it fell asleep!')
+            print('The puppy continues to eat as you add another scoop of kibble to its bowl.\nThe puppy ate so much it fell asleep!')
         else:
             print ('The puppy continues to eat as you add another scoop of kibble to its bowl.')
 
